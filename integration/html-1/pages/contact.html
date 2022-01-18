@@ -24,43 +24,38 @@
         <fieldset>
           <div>
             <label for="firstname">Prénom</label>
-            <input type="text" name="firstname" />
+            <input type="text" name="firstname" id="firstname" />
           </div>
           <div>
             <label for="lastname">Nom</label>
-            <input type="text" name="lastname" />
+            <input type="text" name="lastname" id="lastname"/>
           </div>
           <div>
             <label for="birth_city">lieu naissance</label>
-            <input type="text" name="birth" />
-            <label for="birth_city">date naissance</label>
-            <input type="date" name="birth" />
+            <input type="text" name="birth" id="birth_city"/>
+            <label for="birth">date naissance</label>
+            <input type="date" name="birth" id="birth" />
           </div>
           <div>
             <label for="country">Pays d'origine</label>
-            <input type="text" name="country" />
+            <input type="text" name="country" id="country"/>
           </div>
+          
           <div>
-            <label for="lastname">Nom</label>
-            <input type="text" name="lastname" />
-          </div>
-          <div>
-            <input type="radio" name="civilite" value="0" checked />
+            <label for="civilité">Civilité:</label>
+            <input type="radio" name="civilite" value="0" id="male"  checked />
             <label for="male">male</label>
-          </div>
-
-          <div>
-            <input type="radio" name="civilite" value="1" />
+            <input type="radio" name="civilite" id="female" value="1" />
             <label for="female">female</label>
           </div>
           <div>
             <label for="BAC">moyenne BAC</label>
-            <input type="number" name="BAC" />
+            <input type="number" name="BAC" id="BAC" />
           </div>
 
           <div class="field">
             <label for="object">Formation</label>
-            <select name="objet">
+            <select name="objet" id="object">
               <option value="0">Choisir formation...</option>
               <option value="1">salesforce</option>
               <option value="2">php/symphony</option>
@@ -68,21 +63,21 @@
             </select>
           
             <label for="formation">Autre formation</label>
-            <input type="text" name="formation" />
+            <input type="text" name="formation" id="formation"/>
           
           <div>
             <label for="mail">mail</label>
-            <input type="email" name="mail" />
+            <input type="email" name="mail" placeholder="exemple@gmail.com" id="mail" />
           </div>
           <div>
             <label for="tel">tel:</label>
-            <input type="tel" name="tel" />
+            <input type="tel" name="tel" id="tel"/>
           </div>
         </fieldset>
 
         <fieldset>
           <label for="motivation">motivation</label>
-          <textarea name="motivation" maxlength="100"></textarea>
+          <textarea name="motivation" maxlength="100" id="motivation"></textarea>
         </fieldset>
 
         <div class="toolbar">
