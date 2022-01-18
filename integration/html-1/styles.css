@@ -27,3 +27,17 @@ nav a:hover {
     display: block;
   }
 }
+
+table,
+table th,
+table td {
+  border: 1px solid black;
+}
+
+table:nth-of-type(2),
+tr td:nth-of-type(2) {
+  text-align: right;
+}
+footer {
+  margin-top: 2rem;
+}

@@ -20,15 +20,47 @@
     </header>
     <main>
       <h1>Nous écrire</h1>
-      <form action="">
-        <p>
-          <label for="email">Email : </label>
-          <input type="email" />
-        </p>
-        <p>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </p>
-        <input type="submit" value="Envoyer" />
+      <form action="form.html" method="post">
+        <fieldset>
+          <legend>Mes coordonnées</legend>
+          <div class="field">
+            <label for="firstname">Prénom</label>
+            <div class="value">
+              <input type="text" name="firstname" id="firstname" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="lastname">Nom</label>
+            <div class="value">
+              <input type="text" name="lastname" id="lastname" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <div class="value">
+              <input type="email" name="email" id="email" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ma demande</legend>
+          <div class="field">
+            <select name="objet">
+              <option value="0">Choisir l'objet de ma demande...</option>
+              <option value="q">Question d'ordre général</option>
+              <option value="g">Déclarer un bug gênant</option>
+              <option value="b">Déclarer un bug bloquant</option>
+            </select>
+          </div>
+          <textarea name="query" id="query"></textarea>
+        </fieldset>
+
+        <div class="toolbar">
+          <button type="submit" class="button">Valider le formulaire</button>
+        </div>
       </form>
     </main>
   </body>
