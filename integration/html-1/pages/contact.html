@@ -20,42 +20,69 @@
     </header>
     <main>
       <h1>Nous écrire</h1>
-      <form action="form.html" method="post">
+      <form action="" method="post">
         <fieldset>
-          <legend>Mes coordonnées</legend>
-          <div class="field">
+          <div>
             <label for="firstname">Prénom</label>
-            <div class="value">
-              <input type="text" name="firstname" id="firstname" />
-            </div>
+            <input type="text" name="firstname" />
           </div>
-
-          <div class="field">
+          <div>
             <label for="lastname">Nom</label>
-            <div class="value">
-              <input type="text" name="lastname" id="lastname" />
-            </div>
+            <input type="text" name="lastname" />
+          </div>
+          <div>
+            <label for="birth_city">lieu naissance</label>
+            <input type="text" name="birth" />
+            <label for="birth_city">date naissance</label>
+            <input type="date" name="birth" />
+          </div>
+          <div>
+            <label for="country">Pays d'origine</label>
+            <input type="text" name="country" />
+          </div>
+          <div>
+            <label for="lastname">Nom</label>
+            <input type="text" name="lastname" />
+          </div>
+          <div>
+            <input type="radio" name="civilite" value="0" checked />
+            <label for="male">male</label>
+          </div>
+
+          <div>
+            <input type="radio" name="civilite" value="1" />
+            <label for="female">female</label>
+          </div>
+          <div>
+            <label for="BAC">moyenne BAC</label>
+            <input type="number" name="BAC" />
           </div>
 
           <div class="field">
-            <label for="email">Email</label>
-            <div class="value">
-              <input type="email" name="email" id="email" />
-            </div>
+            <label for="object">Formation</label>
+            <select name="objet">
+              <option value="0">Choisir formation...</option>
+              <option value="1">salesforce</option>
+              <option value="2">php/symphony</option>
+              <option value="3">cobolt</option>
+            </select>
+          
+            <label for="formation">Autre formation</label>
+            <input type="text" name="formation" />
+          
+          <div>
+            <label for="mail">mail</label>
+            <input type="email" name="mail" />
+          </div>
+          <div>
+            <label for="tel">tel:</label>
+            <input type="tel" name="tel" />
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>Ma demande</legend>
-          <div class="field">
-            <select name="objet">
-              <option value="0">Choisir l'objet de ma demande...</option>
-              <option value="q">Question d'ordre général</option>
-              <option value="g">Déclarer un bug gênant</option>
-              <option value="b">Déclarer un bug bloquant</option>
-            </select>
-          </div>
-          <textarea name="query" id="query"></textarea>
+          <label for="motivation">motivation</label>
+          <textarea name="motivation" maxlength="100"></textarea>
         </fieldset>
 
         <div class="toolbar">

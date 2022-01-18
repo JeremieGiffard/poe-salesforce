@@ -41,3 +41,7 @@ tr td:nth-of-type(2) {
 footer {
   margin-top: 2rem;
 }
+
+form div {
+  margin: 1rem 0;
+}
