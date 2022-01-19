@@ -9,10 +9,12 @@
   </head>
   <body>
     <main>
-      <h1>Contenu projet "Structurer un contenu HTML"</h1>
+      <header>
+        <h1>Contenu projet "Structurer un contenu HTML"</h1>
+      </header>
       <section>
         <article>
-          <h2 id="application_internet">Page 1 ! Histoire d'internet</h2>
+          <h2 id="application_internet">Histoire d'internet</h2>
           <p>
             L'<strong>histoire d'internet</strong> remonte au développement des
             premiers réseaux de telecommunication. Lorem ipsum dolor sit amet
@@ -220,7 +222,7 @@
             Cerf attribua à Hubert Zimmermann et Louis Pouzin (développeurs du
             réseau Cyclades) un important travail de développement.
           </p>
-          <p>
+          <p class="tcp-important">
             Avec le rôle du réseau physique réduit à son strict minimum, il
             devint alors possible de fusionner à peu près tout type de réseau
             sans tenir compte de leurs caractéristiques et ainsi résoudre le
@@ -261,10 +263,14 @@
           ou Internet.
         </p>
         <blockquote>
-          Le web est plus une invention sociale que technologique. Je l’ai conçu
-          pour qu’il ait un effet social – aider les gens à travailler ensemble
-          – et non comme un jouet technologique. — Tim Berners-Lee, Weaving the
-          Web, 1999
+          <i>
+            <p>
+              Le web est plus une invention sociale que technologique. Je l’ai
+              conçu pour qu’il ait un effet social – aider les gens à travailler
+              ensemble – et non comme un jouet technologique. — Tim Berners-Lee,
+              Weaving the Web, 1999
+            </p></i
+          >
         </blockquote>
         <figure>
           <img src="img/logo.svg" alt="logo World Wide Web" />
@@ -294,6 +300,7 @@
         <article>
           <h4>La première page Web</h4>
           <p>Voici le code de la première page Web :</p>
+
           <pre>
 &lt;HEADER&gt;
 &lt;TITLE&gt;The World Wide Web project&lt;/TITLE&gt;
