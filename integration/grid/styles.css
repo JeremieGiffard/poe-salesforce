@@ -3,19 +3,11 @@ body {
 }
 
 .container {
+  height: 100vh;
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr;
+  row-gap: 1rem;
   grid-template-rows: 3fr 2fr 3fr 1fr 1fr 1fr;
-  gap: 1em 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "."
-    "."
-    "."
-    "."
-    "."
-    ".";
 }
 
 .item {
@@ -28,7 +20,13 @@ body {
   margin: 0.5rem;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1000px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
   .item:nth-child(1) {
     grid-area: one;
   }
@@ -50,10 +48,13 @@ body {
 
   .container {
     grid-template-areas:
-      "one one one one"
-      "deux deux deux deux"
-      "trois trois quatre quatre"
-      "trois trois cinq cinq"
-      "six six six six";
+      "one one one"
+      "deux deux deux"
+      "deux deux deux"
+      "trois trois quatre"
+      "trois trois quatre"
+      "trois trois cinq"
+      "six six six"
+      "six six six";
   }
 }
