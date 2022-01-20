@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   background-color: lightgray;
+  display: block;
 }
 
 body {
@@ -30,6 +31,7 @@ TABLE
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
 }
 
 table thead {
@@ -62,11 +64,11 @@ table td {
 IMAGE
 ******/
 figure {
-  max-width: 100%;
   border: 2px red solid;
   border-radius: 5px;
   padding: 1rem;
   background-color: #383838;
+  text-align: center;
 }
 
 figcaption {
@@ -76,7 +78,7 @@ figcaption {
 
 img {
   max-width: 100%;
-  text-align: center;
+  margin: 0 auto;
 }
 
 /********
