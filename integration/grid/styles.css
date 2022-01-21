@@ -1,9 +1,10 @@
 body {
   width: 90%;
+  margin: 1rem auto;
 }
 
 .container {
-  height: 100vh;
+  height: 90vh;
   text-align: center;
   display: grid;
   row-gap: 1rem;
@@ -20,30 +21,31 @@ body {
   margin: 0.5rem;
 }
 
-@media screen and (min-width: 1000px) {
-  nav {
+@media screen and (min-width: 900px) {
+  .nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .item:nth-child(1) {
+  .item:nth-of-type(1) {
     grid-area: one;
   }
-  .item:nth-child(2) {
+  .item:nth-of-type(2) {
     grid-area: deux;
   }
-  .item:nth-child(3) {
+  .item:nth-of-type(3) {
     grid-area: trois;
   }
-  .item:nth-child(4) {
+  .item:nth-of-type(4) {
     grid-area: quatre;
   }
-  .item:nth-child(5) {
+  .item:nth-of-type(5) {
     grid-area: cinq;
   }
-  .item:nth-child(6) {
+  .item:nth-of-type(6) {
     grid-area: six;
+    height: 10vh;
   }
 
   .container {
@@ -53,6 +55,7 @@ body {
       "deux deux deux"
       "trois trois quatre"
       "trois trois quatre"
+      "trois trois cinq"
       "trois trois cinq"
       "six six six"
       "six six six";
