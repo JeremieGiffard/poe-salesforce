@@ -1,22 +1,10 @@
-/*Ecrire un programme Javascript qui  Ensuite, il l’informe de sa catégorie :
-
-
-
-
-
-« Benjamin » de 12 à 13 ans
-
-« Minime » de 14 à 15 ans
-
-« Cadet » 16 à 17 ans
- */
-//demande l’âge d’un enfant
 let age = prompt("quel age as tu ?");
-result = "";
+let result = "";
 
+/*
 while (isNaN(age)) {
   age = prompt("veuillez rentrer un age");
-}
+}*/
 
 if (age < 7) {
   result = "trop jeune";
