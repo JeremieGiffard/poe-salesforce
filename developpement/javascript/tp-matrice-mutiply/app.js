@@ -9,6 +9,7 @@ let sum = 0;
 let sumReverse = 0;
 for (let i = 0; i <= matrice.length - 1; i++) {
   sum += matrice[i][i];
+  //sumReverse += matrice[i].reverse()[i];
 }
 
 for (let i = 0; i <= matrice.length - 1; i++) {
