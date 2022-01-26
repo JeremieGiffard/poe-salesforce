@@ -129,3 +129,18 @@ function finder() {
 }
 
 //filter() et map()
+
+// Q2 déclarative
+const personneAvecNomsTermineParADeclarative = etudiants.filter(function (
+  etudiant
+) {
+  return etudiant.prenom.endsWith("a");
+});
+// Q3 : dec
+const nomsDeclarative = etudiants.map(function (etudiant) {
+  return etudiant.nom;
+});
+// Q4
+const hommesRussesDeclarative = etudiants.filter(function (etudiant) {
+  return etudiant.genre === "m" && etudiant.pays === "russie";
+});

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>Calculer dimensions cercle</h1>
+    <form>
+      <div>
+        <label for="rayon">Rayon : </label
+        ><input type="number" id="rayon" name="rayon" required />
+        <p id="err_rayon"></p>
+      </div>
+      <div>
+        <label for="diametre">diametre : </label
+        ><input type="number" id="diametre" name="diametre" disabled />
+      </div>
+      <div>
+        <label for="circonference">circonférence : </label
+        ><input
+          type="number"
+          id="circonference"
+          name="circonference"
+          disabled
+        />
+      </div>
+      <div>
+        <label for="aire">Aire : </label
+        ><input type="number" id="aire" name="aire" disabled />
+      </div>
+      <input id="btnSubmit" type="submit" value="Créer" />
+      <!-- <button id="btnSubmit" type="submit">Créer</button> -->
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
