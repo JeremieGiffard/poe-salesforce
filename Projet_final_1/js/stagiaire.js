@@ -36,6 +36,16 @@ dataStagiaire.forEach((item) => {
   boutonSupprimer.addEventListener("click", function () {
     // dataRow.remove();
     this.parentElement.parentElement.remove();
+
+    //SUPPR POUR DE BON
+
+    for (let i = 0; i < dataStagiaire.length; i++) {
+      if (dataStagiaire[i].id === item.id) {
+        dataStagiaire.splice(i, 1);
+        localStorage.setItem("dataStagiaire", JSON.stringify(dataStagiaire));
+        break;
+      }
+    }
   });
 
   columnAction.appendChild(boutonSupprimer);

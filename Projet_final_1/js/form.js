@@ -76,6 +76,7 @@ function submitForm(event) {
   ) {
     //vider tous les champs
     const formData = {
+      id: uuid.v4(),
       nom: nom.value,
       prenom: prenom.value,
       email: email.value,
