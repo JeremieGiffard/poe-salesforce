@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>Créer votre compte</h1>
+    <p>Voir la <a href="./membres.html">liste des membres</a></p>
+    <form>
+      <div>
+        <label for="nom">Votre nom : </label
+        ><input type="text" id="nom" name="nom" />
+        <p id="err_nom"></p>
+      </div>
+      <div>
+        <label for="prenom">Votre prenom : </label
+        ><input type="text" id="prenom" name="prenom" />
+        <p id="err_prenom"></p>
+      </div>
+      <div>
+        <label for="email">Votre email : </label
+        ><input type="email" id="email" name="email" />
+        <p id="err_email"></p>
+      </div>
+      <input id="btnSubmit" type="submit" value="Créer" />
+      <!-- <button id="btnSubmit" type="submit">Créer</button> -->
+    </form>
+
+    <script src="./js/form.js"></script>
+  </body>
+</html>
