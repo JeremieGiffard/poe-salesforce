@@ -1,6 +1,6 @@
 window.onload = function () {
-  if (localStorage.getItem("data") === null) {
-    localStorage.setItem("data", JSON.stringify([]));
+  if (localStorage.getItem("dataStagiaire") === null) {
+    localStorage.setItem("dataStagiaire", JSON.stringify([]));
   }
 };
 
@@ -67,21 +67,29 @@ function submitForm(event) {
     errBio.classList.remove("err");
   }
 
-  //vider tous les champs
-  const formData = {
-    nom: nom.value,
-    prenom: prenom.value,
-    email: email.value,
-    etudes: etudes.value,
-    bio: etudes.value,
-  };
+  if (
+    nom.value !== "" &&
+    prenom.value !== "" &&
+    email.value !== "" &&
+    etudes.value !== "" &&
+    bio.value !== ""
+  ) {
+    //vider tous les champs
+    const formData = {
+      nom: nom.value,
+      prenom: prenom.value,
+      email: email.value,
+      etudes: etudes.value,
+      bio: bio.value,
+    };
 
-  const data = JSON.parse(localStorage.getItem("data"));
-  data.push(formData);
-  localStorage.setItem("data", JSON.stringify(data));
-  nom.value = "";
-  prenom.value = "";
-  email.value = "";
-  etudes.value = "";
-  bio.value = "";
+    const dataStagiaire = JSON.parse(localStorage.getItem("dataStagiaire"));
+    dataStagiaire.push(formData);
+    localStorage.setItem("dataStagiaire", JSON.stringify(dataStagiaire));
+    nom.value = "";
+    prenom.value = "";
+    email.value = "";
+    etudes.value = "";
+    bio.value = "";
+  }
 }
