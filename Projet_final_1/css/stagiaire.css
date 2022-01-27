@@ -1,0 +1,108 @@
+body {
+  border: 1px solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.parent {
+  border: 1px solid;
+  height: 130px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.child {
+  height: 100px;
+  display: inline-block;
+  background-color: white;
+  width: 30%;
+  color: black;
+  font-weight: bold;
+  padding-top: 40px;
+
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.parent1 {
+  border: 1px solid;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.child1 {
+  height: 100px;
+  display: inline-block;
+  background-color: white;
+  width: 40%;
+  color: black;
+  font-weight: bold;
+}
+.child1:nth-child(1) {
+  grid-area: one;
+  border-right: 1px solid;
+  width: 50%;
+  padding-left: 10px;
+}
+child1:nth-child(2) {
+  grid-area: deux;
+  padding-left: 10px;
+}
+
+.child:nth-child(1) {
+  grid-area: one;
+  height: 100px;
+  padding-left: 10px;
+}
+.child:nth-child(2) {
+  grid-area: two;
+  height: 100px;
+  text-align: right;
+  padding-right: 10px;
+}
+.child:nth-child(3) {
+  grid-area: trois;
+  height: 100px;
+  text-align: left;
+  padding-left: 10px;
+}
+.child:nth-child(4) {
+  grid-area: quatre;
+  height: 100px;
+  text-align: left;
+}
+.child:nth-child(5) {
+  grid-area: cinq;
+  height: 100px;
+  text-align: center;
+}
+.donnees {
+  font-weight: bold;
+  border: 1px solid;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+.form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.deco {
+  font-weight: normal;
+}
+.form1 {
+  border: 1px solid;
+  border-radius: 5px;
+}
+.input-group-text {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}

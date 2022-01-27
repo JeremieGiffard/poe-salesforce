@@ -1,7 +1,10 @@
+.container {
+  height: 100vh;
+}
 .parent {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr 4fr repeat(5, 2fr);
+  grid-template-rows: 0.5fr 3fr 4fr repeat(5, 2fr);
   grid-column-gap: 0px;
   grid-row-gap: 10px;
 }
@@ -46,7 +49,7 @@
   .parent {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 3fr repeat(4, 2fr);
+    grid-template-rows: 0.5fr 3fr repeat(4, 2fr);
     grid-column-gap: 5px;
     grid-row-gap: 10px;
   }
