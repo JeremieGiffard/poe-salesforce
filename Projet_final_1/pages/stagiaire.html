@@ -14,9 +14,10 @@
     <title>Document</title>
   </head>
   <body>
-          <nav class="nav_bar">
-        <div class="nav1">
-          <a class="navbar-brand" href="../">LOGO</a>
+    <div class="container-lg parent">
+      <div class="navigation navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">LOGO</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -28,62 +29,73 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-        </div>
-        <div class="nav2">
-          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-        </div>
-        <div class="nav3"><a class="nav-link" href="#">Nos stagiaires</a></div>
-      </nav>
-    <main >
-      <section class="Stagiaires">
-        <h3 class="List">Liste des stagiaires</h3>
-        <table class="table-primary" border="1">
-          <thead>
-            <tr>
-              <th>Nom</th>
-              <th>Prenom</th>
-              <th>Email</th>
-              <th colspan="2">Action</th>
-            </tr>
-          </thead>
-          <tbody id="listeStagiaires"></tbody>
-        </table>
-        <button type="button" class="btn btn-primary">Ajouter</button>
-        <article>
-          <textarea id="story" name="story" rows="20" cols="100" >
-            Text...
-          </textarea>
-        </article>
-      </section>
-    </main>
-    
-    <footer class="footer">
-    <div class="child1">
-      <h5>Notre adresse</h5>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate at corporis culpa perspiciatis eum,
-          sapiente, sit laboriosam dolores, aspernatur expedita vel! Quod, expedita. Nesciunt,
-          reprehenderit odio. Consequuntur praesentium id perferendis.</p>
-    </div>
-    <div class="child1">
-      <h5>S'incrire Ã  la newsletter</h5>
-      <form>
-        <div>
-          <label for="email">  </label
-          ><input
-            type="email"
-            id="email"
-            placeholder="Votre adresse email"
-          />
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 justify-content-end flex-grow-1">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="form.html"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="stagiaire.html">Nos stagiaires</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </form>
-    </footer>
+      </div>
+
+      <div class="centre">
+        <section class="Stagiaires">
+          <h3 class="List">Liste des stagiaires</h3>
+          <table class="table-primary" border="1">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th colspan="2">Action</th>
+              </tr>
+            </thead>
+            <tbody id="listeStagiaires"></tbody>
+          </table>
+          <button type="button" class="btn btn-primary">Ajouter</button>
+          <article>
+            <pre id="story" name="story" rows="20" cols="100">Text...</pre>
+          </article>
+        </section>
+      </div>
+      <div class="adresse"><p>Notre adresse</p></div>
+
+      <div class="newsletter">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label"
+              >Newsletter</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="validationCustom01"
+              placeholder="Enter email"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid email.</div>
+          </div>
+        </form>
+      </div>
+    </div>
     <script
-src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
-integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
-crossorigin="anonymous"
-referrerpolicy="no-referrer"
-></script>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="../js/stagiaire.js"></script>
   </body>
 </html>

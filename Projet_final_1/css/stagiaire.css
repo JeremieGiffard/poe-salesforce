@@ -1,41 +1,62 @@
 body {
-  /* text-align: center; */
-  margin: 10px 10px;
-  /* border: 1px solid black; */
+  padding: 0.5em 0.5em;
 }
 
-.nav_bar {
+.parent {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 3fr 4fr 2fr 2fr 2fr repeat(2, 5rem);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
+  grid-template-areas:
+    "navigation"
+    "centre"
+    "centre"
+    "centre"
+    "centre"
+    "centre"
+    "adresse"
+    "newsletter";
+}
+
+.navigation,
+.adresse,
+.newsletter,
+.centre {
   border: 1px solid black;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
 }
 
-.nav1 {
-  margin-left: 10px;
-  width: 100px;
-  font-weight: bolder;
+.navigation {
+  grid-area: navigation;
+}
+.centre {
+  grid-area: centre;
+}
+.adresse {
+  grid-area: adresse;
+}
+.newsletter {
+  grid-area: newsletter;
 }
 
-.nav2 {
-  margin-left: 400px;
-  width: 100px;
-}
+@media screen and (min-width: 576px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2rem 45rem 5rem; /* choix hauteur*/
+    gap: 10px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navigation navigation navigation navigation navigation navigation"
+      "centre centre centre centre centre centre"
+      "adresse adresse adresse newsletter newsletter newsletter";
+  }
 
-.nav3 {
-  margin-left: 100px;
-  width: 150px;
-}
-
-.Stagiaires {
-  border: 1px solid black;
-  height: 1000px;
-}
-
-.table-primary,
-.btn,
-.List {
-  margin: 20px;
+  .table-primary,
+  .btn,
+  .List {
+    margin: 20px;
+  }
 }
 
 textarea {
@@ -48,20 +69,4 @@ textarea {
   border-radius: 5px;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px #999;
-}
-
-.footer {
-  border: 1px solid black;
-  margin-top: 10px;
-}
-
-.child1 {
-  display: inline-block;
-  width: 40%;
-  color: black;
-}
-.child1:nth-child(1) {
-  grid-area: one;
-  border-right: 1px solid;
-  width: 45%;
 }
