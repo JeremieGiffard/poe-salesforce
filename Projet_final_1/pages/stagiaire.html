@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="../css/stagiaire.css" />
     <title>Document</title>
   </head>
+
   <body>
     <div class="container-lg parent">
-      <div class="navigation navbar navbar-expand-sm navbar-light bg-light">
+      <div class="nav1 navbar navbar-expand-sm navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html">LOGO</a>
           <button
@@ -32,12 +33,15 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 justify-content-end flex-grow-1">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="form.html"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./form.html"
                   >Accueil</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="stagiaire.html">Nos stagiaires</a>
+                <a class="nav-link" href="./stagiaire.html">Nos stagiaires</a>
               </li>
             </ul>
           </div>
@@ -45,42 +49,33 @@
       </div>
 
       <div class="centre">
-        <section class="Stagiaires">
-          <h3 class="List">Liste des stagiaires</h3>
-          <table class="table-primary" border="1">
-            <thead>
-              <tr>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Email</th>
-                <th colspan="2">Action</th>
-              </tr>
-            </thead>
-            <tbody id="listeStagiaires"></tbody>
-          </table>
-          <button type="button" class="btn btn-primary">Ajouter</button>
-          <article>
-            <pre id="story" name="story" rows="20" cols="100">Text...</pre>
-          </article>
-        </section>
+        <h3 class="List">Liste des stagiaires</h3>
+
+        <table class="table table-success table-striped">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Email</th>
+              <th colspan="2">Action</th>
+            </tr>
+          </thead>
+          <tbody id="listeStagiaires"></tbody>
+        </table>
+        <a class="btn btn-primary" href="./form.html" role="button">Ajouter</a>
+        <pre id="story" class="story">Détails stagiaires :</pre>
       </div>
-      <div class="adresse"><p>Notre adresse</p></div>
+
+      <div class="adresse">
+        <h5>Notre adresse</h5>
+      </div>
 
       <div class="newsletter">
-        <form class="row g-3 needs-validation" novalidate>
-          <div class="col-md-4">
-            <label for="validationCustom01" class="form-label"
-              >Newsletter</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="validationCustom01"
-              placeholder="Enter email"
-              required
-            />
-            <div class="valid-feedback">Looks good!</div>
-            <div class="invalid-feedback">Please provide a valid email.</div>
+        <h5>S'incrire à la newsletter</h5>
+        <form>
+          <div>
+            <label for="email"> </label>
+            <input type="email" id="email" placeholder="Votre adresse email" />
           </div>
         </form>
       </div>
