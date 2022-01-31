@@ -2,14 +2,13 @@ const dataStagiaire = JSON.parse(localStorage.getItem("dataStagiaire"));
 
 //SELECTORS
 const listeStagiaires = document.querySelector("#listeStagiaires");
-const detailStagiaire = document.querySelector("#story");
+const detailStagiaire = document.querySelector(".story");
 //FIN SELECTOR
 
 dataStagiaire.forEach((item) => {
   const dataRow = document.createElement("tr");
   const columnNom = document.createElement("td");
   columnNom.innerText = item.nom;
-  console.log(item.nom);
 
   const columnPrenom = document.createElement("td");
   columnPrenom.innerText = item.prenom;
@@ -23,7 +22,7 @@ dataStagiaire.forEach((item) => {
   const boutonVoir = document.createElement("button");
   boutonVoir.innerText = "Voir";
   boutonVoir.addEventListener("click", function () {
-    detailStagiaire.innerText = `${item.nom} ${item.prenom}\nEmail : ${item.email}\nEtudes faites : ${item.etudes}\nBio : ${item.bio}`;
+    detailStagiaire.innerText = `Informations du stagiaires :\n${item.nom} ${item.prenom}\nEmail : ${item.email}\nEtudes faites : ${item.etudes}\nBio : ${item.bio}`;
 
     console.log("test click button voir"); // AFFICHER LES INFO
   });
@@ -36,6 +35,7 @@ dataStagiaire.forEach((item) => {
   boutonSupprimer.addEventListener("click", function () {
     // dataRow.remove();
     this.parentElement.parentElement.remove();
+    detailStagiaire.innerText = `DÃ©tails stagiaires :`;
 
     //SUPPR POUR DE BON
 

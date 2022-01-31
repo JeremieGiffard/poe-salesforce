@@ -1,21 +1,23 @@
 window.onload = function () {
-  if (localStorage.getItem("data") === null) {
-    localStorage.setItem("data", JSON.stringify([]));
+  if (localStorage.getItem("dataStagiaire") === null) {
+    localStorage.setItem("dataStagiaire", JSON.stringify([]));
   }
 };
 
+/* SELECTORS */
 const nom = document.querySelector("#nom");
 const prenom = document.querySelector("#prenom");
 const email = document.querySelector("#email");
+const etudes = document.querySelector("#etudes");
+const bio = document.querySelector("#bio");
 const btnSubmit = document.querySelector("#btnSubmit");
 
 // Err fields
 const errNom = document.querySelector("#err_nom");
 const errPrenom = document.querySelector("#err_prenom");
 const errEmail = document.querySelector("#err_email");
-
-// table list
-const listeUtilisateurs = document.querySelector("#listeUtilisateurs");
+const errEtudes = document.querySelector("#err_bio");
+const errBio = document.querySelector("#err_bio");
 
 btnSubmit.addEventListener("click", submitForm);
 
@@ -25,6 +27,7 @@ function submitForm(event) {
   console.log("prenom : ", prenom.value);
   console.log("email : ", email.value);
 
+  //ERROR CONTROL
   if (nom.value === "") {
     errNom.innerText = "Veuillez saisir le nom";
     errNom.classList.add("err");
@@ -49,49 +52,45 @@ function submitForm(event) {
     errEmail.classList.remove("err");
   }
 
-  if (nom.value !== "" && prenom.value !== "" && email.value !== "") {
-    const dataRow = document.createElement("tr");
-    const columnNom = document.createElement("td");
-    columnNom.innerText = nom.value;
+  if (etudes.value === "") {
+    errEtudes.innerText = "Veuillez saisir vos études";
+    errEtudes.classList.add("err");
+  } else {
+    errEtudes.innerText = "";
+    errEtudes.classList.remove("err");
+  }
+  if (bio.value === "") {
+    errBio.innerText = "Veuillez saisir vos études";
+    errBio.classList.add("err");
+  } else {
+    errBio.innerText = "";
+    errBio.classList.remove("err");
+  }
 
-    const columnPrenom = document.createElement("td");
-    columnPrenom.innerText = prenom.value;
-
-    const columnEmail = document.createElement("td");
-    columnEmail.innerText = email.value;
-
-    const columnAction = document.createElement("td");
-
-    const boutonSupprimer = document.createElement("button");
-    boutonSupprimer.innerText = "Supprimer";
-    boutonSupprimer.addEventListener("click", function () {
-      // dataRow.remove();
-      this.parentElement.parentElement.remove();
-    });
-
-    columnAction.appendChild(boutonSupprimer);
-
-    // appendChild : Ajoute un seul enfant
-    // dataRow.appendChild(columnNom);
-    // dataRow.appendChild(columnPrenom);
-    // dataRow.appendChild(columnEmail);
-    // dataRow.appendChild(columnAction);
-
-    // append : Ajouter plusieurs enfant
-    dataRow.append(columnNom, columnPrenom, columnEmail, columnAction);
-    listeUtilisateurs.appendChild(dataRow);
+  if (
+    nom.value !== "" &&
+    prenom.value !== "" &&
+    email.value !== "" &&
+    etudes.value !== "" &&
+    bio.value !== ""
+  ) {
     //vider tous les champs
     const formData = {
+      id: uuid.v4(),
       nom: nom.value,
       prenom: prenom.value,
       email: email.value,
+      etudes: etudes.value,
+      bio: bio.value,
     };
 
-    const data = JSON.parse(localStorage.getItem("data"));
-    data.push(formData);
-    localStorage.setItem("data", JSON.stringify(data));
+    const dataStagiaire = JSON.parse(localStorage.getItem("dataStagiaire"));
+    dataStagiaire.push(formData);
+    localStorage.setItem("dataStagiaire", JSON.stringify(dataStagiaire));
     nom.value = "";
     prenom.value = "";
     email.value = "";
+    etudes.value = "";
+    bio.value = "";
   }
 }

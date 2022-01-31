@@ -26,11 +26,11 @@ body {
 }
 .adresse {
   grid-area: 3 / 1 / 4 / 2;
-  /* background-color: blue; */
+  background-color: lightgray;
 }
 .newsletter {
   grid-area: 4 / 1 / 5 / 2;
-  /* background-color: red; */
+  background-color: lightgray;
 }
 
 .table,
@@ -62,7 +62,7 @@ td {
   border-radius: 10px;
   padding-left: 20px;
   padding-top: 20px;
-  box-shadow: rgb(143, 146, 146);
+  box-shadow: 8px 8px 12px rgb(0, 0, 0);
 }
 
 .tab {
@@ -73,8 +73,8 @@ td {
   .parent {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2rem 50rem 5rem; /* choix hauteur*/
-    gap: 10px 5px;
+    grid-template-rows: 2rem auto 9rem;
+    gap: 15px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "nav1 nav1 nav1 nav1 nav1 nav1"
@@ -82,19 +82,27 @@ td {
       "adresse adresse adresse newsletter newsletter newsletter";
   }
   .nav1 {
+    border-radius: 10px;
     grid-area: nav1;
     /* background-color: yellow; */
   }
   .adresse {
+    padding: 10px;
+    background-color: lightgray;
     grid-area: adresse;
-    background-color: white;
+    /* background-color: blue; */
   }
   .newsletter {
+    text-align: center;
+    padding-top: 30px;
+    background-color: lightgray;
     grid-area: newsletter;
-    background-color: white;
+    /* background-color: red; */
   }
-
   .centre {
+    background-color: rgb(51, 58, 87);
+    border-radius: 10px;
+    box-shadow: 8px 8px 12px rgb(0, 0, 0);
     grid-area: centre;
     /* background-color: purple; */
   }
