@@ -20,16 +20,14 @@ public class TP8ResoudreEquation {
         else {
             if (delta == 0){ //case 1 solution
                 double delta1 = -( (double)B/(2*(double)A ) );
-                System.out.printf("L'équation %dX² + %dX + %d =0  n'a une unique solution : \n  X = %f",A,B,C,delta1);
+                System.out.printf("L'équation %dX² + %dX + %d =0  a une unique solution : \n  X = %.1f",A,B,C,delta1);
             }
             else{ //case 2 solutions
                 double delta2 = (-(double)B - Math.sqrt(delta) )/(2*(double)A ) ;
                 double delta3 = (-(double)B + Math.sqrt(delta) )/(2*(double)A ) ;
-                System.out.printf("L'équation %dX² + %dX + %d =0  a deux solutions distinces : \n  X = %f ou X = %f",A,B,C,delta2,delta3);
+                System.out.printf("L'équation %dX² + %dX + %d =0  a deux solutions distinctes : \n  X = %.1f ou X = %.1f",A,B,C,delta2,delta3);
             }
         }
-
-
 
     }
 }

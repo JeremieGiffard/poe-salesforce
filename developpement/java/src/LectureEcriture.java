@@ -14,4 +14,7 @@ public class LectureEcriture {
         System.out.printf("Rapport 2 : %d / %d = %d \n",nombre1,nombre2,something);
         System.out.printf("Rapport 3 : %d / %d = %f \n",nombre1,nombre2,rapport3);
     }
+
+
 }
+
