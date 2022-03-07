@@ -1,3 +1,5 @@
+package DebutJava;
+
 public class intro {
     public static void main(String[] args){
         int  age=44; //declaration explicite

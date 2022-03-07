@@ -1,3 +1,5 @@
+package DebutJava;
+
 import java.util.Scanner;
 public class LectureEcriture2 {
     public static void main(String[] args) {

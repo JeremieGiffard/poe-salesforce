@@ -1,3 +1,5 @@
+package DebutJava;
+
 import java.util.ArrayList;
 
 public class tp27OccurenceTableau {

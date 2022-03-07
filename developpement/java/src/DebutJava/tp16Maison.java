@@ -1,3 +1,4 @@
+package DebutJava;
 
 public class tp16Maison {
     public static void main(String[] args) {

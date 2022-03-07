@@ -1,3 +1,4 @@
+package DebutJava;
 
 public class Tp14BisTableau {
 

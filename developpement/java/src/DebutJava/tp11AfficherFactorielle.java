@@ -1,3 +1,5 @@
+package DebutJava;
+
 import java.util.Scanner;
 public class tp11AfficherFactorielle {
     public static void main(String[] args) {

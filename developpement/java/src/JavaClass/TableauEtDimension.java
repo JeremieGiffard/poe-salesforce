@@ -1,3 +1,5 @@
+package JavaClass;
+
 public class TableauEtDimension {
     public static void main(String[] args) {
 //        2 3 4

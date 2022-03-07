@@ -1,3 +1,5 @@
+package DebutJava;
+
 import java.util.Scanner;
 
 public class tp3Permutation {

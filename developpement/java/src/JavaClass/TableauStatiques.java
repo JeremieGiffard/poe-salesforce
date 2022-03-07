@@ -1,4 +1,4 @@
-
+package JavaClass;
 //import java.util.Scanner;
 
 public class TableauStatiques {

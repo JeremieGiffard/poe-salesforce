@@ -1,3 +1,5 @@
+package DebutJava;
+
 public class LectureEcriture {
     public static void main(String[] args) {
         int nombre1=45;

@@ -1,3 +1,5 @@
+package DebutJava;
+
 public class Souris {
     private int poids;
     private String couleur;

@@ -1,3 +1,5 @@
+package JavaClass;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +39,7 @@ abstract class Personnage{
 
 }
 
-class Guerrier extends package2.Personnage {
+class Guerrier extends Personnage{
     private String arme;
 
     public Guerrier(String nom,int dureeDeVie,String pays,String arme){
@@ -69,7 +71,7 @@ class Heritage {
     public static void main(String[] args) {
 
         List<Guerrier> users=new ArrayList<>();
-        package2.Personnage g=new Guerrier("Jean-Paul",95,"France","Stylo");
+        Personnage g=new Guerrier("Jean-Paul",95,"France","Stylo");
         g.rencontrer();
 
 
