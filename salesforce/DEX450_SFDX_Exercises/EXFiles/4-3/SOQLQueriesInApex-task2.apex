@@ -7,8 +7,9 @@
 //   - Selects the Id field
 //   - From the Case sObject
 
+List<Case> caseList = [SELECT Id FROM CASE];
 
 System.debug('\n\nTotal number of cases: ' + caseList.size());
 for (Case c : caseList) {
-    System.debug(c);
+    System.debug('compteur case'+c);
 }
