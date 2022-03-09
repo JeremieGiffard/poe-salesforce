@@ -40,7 +40,7 @@ for(User resultUser : resultUsers){
 
 // OPTIONAL TODO #4: Review this alternative solution that processes 
 //  contacts and users using the same loop
-/*
+
 // Alternative solution
 for(List<sObject> resultList :[FIND '{Frank}' 
                                RETURNING Contact(FirstName, LastName), 
@@ -53,4 +53,3 @@ for(List<sObject> resultList :[FIND '{Frank}'
     }
 }
 
-*/
