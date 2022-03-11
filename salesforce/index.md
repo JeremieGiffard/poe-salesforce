@@ -129,3 +129,10 @@ Commerce cloud
 
 /!\ B2C VS B2C peut on faire un mix des deux ?
 mail : peut etre blacklisté par fournisseur d'accès.
+
+Chatter :
+Suivre enregistrmeent users. Rapports et tableau de bord.
+Creer publication publique/privée
+
+Org
+objet manager
