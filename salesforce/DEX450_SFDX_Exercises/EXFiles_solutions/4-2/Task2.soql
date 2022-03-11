@@ -1,3 +1,0 @@
-SELECT Id, Subject, Type
-    FROM Case
-    WHERE type = NULL

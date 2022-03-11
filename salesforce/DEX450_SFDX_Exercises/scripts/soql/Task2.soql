@@ -1,3 +1,0 @@
-SELECT Id, Subject, Type, Status
-  FROM Case
-  WHERE Type = null
